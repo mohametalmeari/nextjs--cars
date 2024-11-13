@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.dev-leading-wide {
+  line-height: 175%;
+}
+
 @layer components {
   .transition-all-500 {
     @apply transition-all duration-500;

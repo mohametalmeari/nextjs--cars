@@ -25,7 +25,7 @@ export const Navbar = () => {
       </Button>
 
       <ul
-        className={`fixed bg-[#1E3A8A] inset-0 transition-all-500 text-white flex flex-col 
+        className={`fixed bg-primary inset-0 transition-all-500 text-white flex flex-col 
                     items-center py-20 ${!open ? "translate-x-full" : ""}   
                     sm:static sm:flex-row sm:translate-x-0 sm:bg-transparent
                     sm:py-0 
