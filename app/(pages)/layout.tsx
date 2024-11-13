@@ -9,7 +9,7 @@ export default function Layout({
   return (
     <div className="flex flex-col min-h-screen text-[#2D2D2D]">
       <Navbar />
-      <div className="flex-1 p-3">{children}</div>
+      <div className="flex-1">{children}</div>
       <Footer />
     </div>
   );

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./botton";
+import { Button } from "./button";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
@@ -15,7 +15,7 @@ export const Navbar = () => {
   const toggle = () => setOpen(!open);
 
   return (
-    <nav className="h-16 flex justify-between items-center px-3 absolute right-0 left-0 top-0">
+    <nav className="text-white h-16 flex justify-between items-center px-res absolute right-0 left-0 top-0">
       <Link href="/">
         <Image src="/logo.svg" alt="RoadStar Motors" width={75} height={29} />
       </Link>
@@ -27,7 +27,7 @@ export const Navbar = () => {
       <ul
         className={`fixed bg-[#1E3A8A] inset-0 transition-all-500 text-white flex flex-col 
                     items-center py-20 ${!open ? "translate-x-full" : ""}   
-                    sm:static sm:flex-row sm:translate-x-0 sm:bg-transparent sm:text-[#2D2D2D]
+                    sm:static sm:flex-row sm:translate-x-0 sm:bg-transparent
                     sm:py-0 
                     `}
       >
@@ -36,7 +36,7 @@ export const Navbar = () => {
             <Link
               href={href}
               onClick={toggle}
-              className="hover:bg-white/10 sm:hover:bg-black/5 transition-all-500 rounded-lg px-2 pb-1"
+              className="hover:bg-white/10 transition-all-500 rounded-lg px-2 pb-1"
             >
               {label}
             </Link>

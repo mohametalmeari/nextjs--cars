@@ -1,3 +1,9 @@
+import { HeroSection } from "@/components/home/hero-section";
+
 export default function Page() {
-  return <main className="pt-16">Home</main>;
+  return (
+    <main>
+      <HeroSection />
+    </main>
+  );
 }

@@ -4,6 +4,10 @@
 
 @layer components {
   .transition-all-500 {
-    transition: all 500ms;
+    @apply transition-all duration-500;
+  }
+
+  .px-res {
+    @apply px-3 sm:px-20 md:px-32;
   }
 }
