@@ -10,6 +10,7 @@ import { MdOutlineClose } from "react-icons/md";
 const links = [
   { href: "/", label: "Home" },
   { href: "about", label: "About" },
+  { href: "faqs", label: "FAQs" },
 ];
 
 export const Navbar = () => {
