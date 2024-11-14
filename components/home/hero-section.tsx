@@ -4,7 +4,7 @@ import { IoCarSport } from "react-icons/io5";
 
 export const HeroSection = () => {
   return (
-    <section className="text-white h-[70vh] sm:h-screen">
+    <section className="text-white h-[70vh] sm:h-screen mb-20">
       <Image
         src={"/home-banner.jpg"}
         width={1300}

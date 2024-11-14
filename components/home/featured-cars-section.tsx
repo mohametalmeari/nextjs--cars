@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export const FeaturedCarsSection = () => {
   return (
-    <section className="px-res py-40 text-typography">
+    <section className="px-res py-20 text-typography">
       <h2 className="font-semibold text-xl mb-5">Featured Cars</h2>
       <div className="flex flex-col lg:gap-10 lg:flex-row">
         <div className="flex-1 flex flex-col justify-center gap-5 lg:mb-8 text-2xl md:text-3xl lg:text-2xl xl:text-4xl border-t-8 border-y-primary py-5 lg:border-b-8">
