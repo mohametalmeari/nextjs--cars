@@ -7,7 +7,10 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 
-const links = [{ href: "/", label: "Home" }];
+const links = [
+  { href: "/", label: "Home" },
+  { href: "about", label: "About" },
+];
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -28,7 +31,7 @@ export const Navbar = () => {
         className={`fixed bg-primary inset-0 transition-all-500 text-white flex flex-col 
                     items-center py-20 ${!open ? "translate-x-full" : ""}   
                     sm:static sm:flex-row sm:translate-x-0 sm:bg-transparent
-                    sm:py-0 
+                    sm:py-0 gap-5
                     `}
       >
         {links.map(({ href, label }) => (
