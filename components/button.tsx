@@ -1,6 +1,6 @@
 interface Props {
   children: React.ReactNode;
-  variant: "ghost" | "primary";
+  variant: "ghost" | "primary" | "secondary";
   onClick?: () => void;
   className?: string;
 }
@@ -10,6 +10,8 @@ export const Button = ({ children, variant, onClick, className }: Props) => {
     ghost: "hover:bg-black/5 rounded-full aspect-square p-1 transition-all-500",
     primary:
       "bg-white text-black px-5 py-2 pb-3 rounded-full hover:bg-opacity-70 transition-all-500",
+    secondary:
+      "bg-primary text-white font-semibold px-5 py-2 pb-3 rounded-full hover:bg-opacity-90 transition-all-500",
   };
   return (
     <button className={`${cn[variant]} ${className}`} onClick={onClick}>
