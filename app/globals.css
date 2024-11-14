@@ -6,6 +6,10 @@
   line-height: 175%;
 }
 
+.dev-grid-cols-dynamic {
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
 @layer components {
   .transition-all-500 {
     @apply transition-all duration-500;
