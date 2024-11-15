@@ -9,6 +9,7 @@ import { MdOutlineClose } from "react-icons/md";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "services", label: "Services" },
   { href: "about", label: "About" },
   { href: "faqs", label: "FAQs" },
   { href: "contact", label: "Contact" },
@@ -33,7 +34,7 @@ export const Navbar = () => {
         className={`fixed bg-primary inset-0 transition-all-500 text-white flex flex-col 
                     items-center py-20 ${!open ? "translate-x-full" : ""}   
                     sm:static sm:flex-row sm:translate-x-0 sm:bg-transparent
-                    sm:py-0 gap-5
+                    sm:py-0 gap-10 sm:gap-3 md:gap-5 text-2xl sm:text-base lg:text-lg
                     `}
       >
         {links.map(({ href, label }) => (
