@@ -22,7 +22,7 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col gap-2 flex-[1]">
           <h2 className="font-semibold">Quick Links</h2>
-          <ul className="grid grid-cols-2 md:grid-cols-1">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-1">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link href={href} className="hover:underline">
