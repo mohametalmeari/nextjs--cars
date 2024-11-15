@@ -5,7 +5,9 @@ interface Props {
   params: { id: string };
 }
 
-export default function Page({ params: { id } }: Props) {
+export default async function Page({ params }: Props) {
+  const { id } = await params;
+
   return (
     <main>
       <HeroSection title="Car Details" />
