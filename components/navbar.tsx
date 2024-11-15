@@ -9,11 +9,11 @@ import { MdOutlineClose } from "react-icons/md";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "inventory", label: "Inventory" },
-  { href: "services", label: "Services" },
-  { href: "about", label: "About" },
-  { href: "faqs", label: "FAQs" },
-  { href: "contact", label: "Contact" },
+  { href: "/inventory", label: "Inventory" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "About" },
+  { href: "/faqs", label: "FAQs" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
