@@ -13,11 +13,11 @@ export const HeroSection = () => {
         className="absolute -z-50 inset-0 h-[70vh] w-full sm:h-screen object-cover object-[30%] md:object-[30%]"
       />
       <div className="pt-16 sm:pt-32 px-res">
-        <div className="pt-12">
-          <h1 className="text-4xl mb-12 sm:mb-20 font-bold sm:text-5xl lg:text-7xl sm:leading-[150%] lg:leading-[150%]">
+        <div className="pt-12 flex flex-col items-start gap-12">
+          <h1 className="text-4xl font-bold sm:text-5xl lg:text-7xl leading-[150%] sm:leading-[150%] lg:leading-[150%]">
             Drive Your Dreams <br /> Today!
           </h1>
-          <h2 className="leading-[200%] font-semibold sm:text-2xl sm:leading-[200%] mb-12">
+          <h2 className="leading-[200%] font-semibold sm:text-2xl sm:leading-[200%]">
             Explore a wide range of cars
             <br />
             with unbeatable prices &
