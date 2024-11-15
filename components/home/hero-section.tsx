@@ -24,7 +24,11 @@ export const HeroSection = () => {
             <br />
             financing options.
           </h2>
-          <Button variant="primary" className="flex items-center gap-3">
+          <Button
+            variant="primary"
+            className="flex items-center gap-3"
+            href="inventory"
+          >
             Browse Cars
             <IoCarSport className="text-2xl" />
           </Button>

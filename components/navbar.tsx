@@ -9,6 +9,7 @@ import { MdOutlineClose } from "react-icons/md";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "inventory", label: "Inventory" },
   { href: "services", label: "Services" },
   { href: "about", label: "About" },
   { href: "faqs", label: "FAQs" },
@@ -26,15 +27,15 @@ export const Navbar = () => {
         <Image src="/logo.svg" alt="RoadStar Motors" width={75} height={29} />
       </Link>
 
-      <Button variant="ghost" onClick={toggle} className="sm:hidden">
+      <Button variant="ghost" onClick={toggle} className="md:hidden">
         <HiMenuAlt3 className="text-2xl" />
       </Button>
 
       <ul
         className={`fixed bg-primary inset-0 transition-all-500 text-white flex flex-col 
                     items-center py-20 ${!open ? "translate-x-full" : ""}   
-                    sm:static sm:flex-row sm:translate-x-0 sm:bg-transparent
-                    sm:py-0 gap-10 sm:gap-3 md:gap-5 text-2xl sm:text-base lg:text-lg
+                    md:static md:flex-row md:translate-x-0 md:bg-transparent
+                    md:py-0 gap-10 md:gap-3 lg:gap-5 text-2xl md:text-sm lg:text-lg
                     `}
       >
         {links.map(({ href, label }) => (
@@ -52,7 +53,7 @@ export const Navbar = () => {
         <Button
           variant="ghost"
           onClick={toggle}
-          className="absolute top-0 right-0 m-5 hover:bg-white/10 sm:hidden"
+          className="absolute top-0 right-0 m-5 hover:bg-white/10 md:hidden"
         >
           <MdOutlineClose className="text-2xl" />
         </Button>
