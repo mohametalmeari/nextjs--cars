@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/hero-section";
 import { CarDetails } from "@/components/inventory/car-details";
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default async function Page({ params }: Props) {
