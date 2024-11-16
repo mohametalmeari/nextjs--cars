@@ -7,6 +7,7 @@ import { Cairo } from "next/font/google";
 const fontAr = Cairo({
   variable: "--font-ar",
   weight: ["300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin", "arabic"],
 });
 
 interface Props {
