@@ -3,10 +3,13 @@
 import { useState } from "react";
 import { Button } from "../button";
 import { RiMailSendLine } from "react-icons/ri";
+import { useTranslation } from "@/contexts/translation-provider";
 
 export const FormSection = () => {
   const [missingFields, setMissingFields] = useState<string[]>([]);
   const [sent, setSent] = useState(false);
+
+  const { translate: t } = useTranslation();
 
   const handleSend = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,14 +38,14 @@ export const FormSection = () => {
   return (
     <section className="px-res py-10 text-typography flex flex-col items-center">
       <h2 className="font-semibold text-xl pb-5 text-center border-b-4 border-b-primary w-full max-w-[15rem]">
-        Contact Form
+        {t("contact.form.title")}
       </h2>
       <form className="flex flex-col w-full gap-5 pt-10" onSubmit={handleSend}>
         <div className="contents md:flex md:gap-5">
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder={t("Name", true) as string}
             className="md:flex-1"
             style={missingFields.includes("name") ? { borderColor: "red" } : {}}
             onChange={handleChange}
@@ -50,7 +53,7 @@ export const FormSection = () => {
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder={t("Email", true) as string}
             className="md:flex-1"
             style={
               missingFields.includes("email") ? { borderColor: "red" } : {}
@@ -61,7 +64,7 @@ export const FormSection = () => {
         <textarea
           name="message"
           className="min-h-40"
-          placeholder="Message"
+          placeholder={t("Message", true) as string}
           style={
             missingFields.includes("message") ? { borderColor: "red" } : {}
           }
@@ -72,7 +75,7 @@ export const FormSection = () => {
             variant="secondary"
             className="md:w-fit px-8 uppercase flex items-center justify-center gap-3"
           >
-            Send
+            {t("Send")}
             <RiMailSendLine />
           </Button>
           {missingFields.length > 0 && (

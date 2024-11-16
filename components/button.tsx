@@ -2,7 +2,7 @@ import Link from "next/link";
 
 interface BaseProps {
   children: React.ReactNode;
-  variant: "ghost" | "primary" | "secondary";
+  variant: "ghost" | "primary" | "secondary" | "small";
   className?: string;
 }
 
@@ -31,6 +31,8 @@ export const Button = ({
       "bg-white text-black px-5 py-2 pb-3 rounded-full hover:bg-opacity-70 transition-all-500",
     secondary:
       "bg-primary text-white font-semibold px-5 py-2 pb-3 rounded-full hover:bg-opacity-90 transition-all-500",
+    small:
+      "bg-white ring-2 ring-black/70 text-black hover:bg-opacity-70 rounded-md px-1 transition-all-500",
   };
 
   if (href && onClick) {
