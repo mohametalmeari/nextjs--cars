@@ -4,28 +4,49 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./button";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { useState } from "react";
-import { MdOutlineClose } from "react-icons/md";
+import { useEffect, useState } from "react";
+import { MdLanguage, MdOutlineClose } from "react-icons/md";
+import { useTranslation } from "@/contexts/translation-provider";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/inventory", label: "Inventory" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
-  { href: "/faqs", label: "FAQs" },
   { href: "/contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  const { lang, setLang, translate: t } = useTranslation();
+
+  useEffect(() => {
+    localStorage.setItem("lang", lang);
+    document.documentElement.dir = lang === "EN" ? "ltr" : "rtl";
+  }, [lang]);
+
   const toggle = () => setOpen(!open);
 
+  const toggleLang = () => setLang(lang === "EN" ? "AR" : "EN");
+
   return (
-    <nav className="text-white h-16 flex justify-between items-center px-res absolute right-0 left-0 top-0">
+    <nav
+      className="text-white h-16 flex justify-between items-center px-res absolute right-0 left-0 top-0"
+      style={lang === "AR" ? { flexDirection: "row-reverse" } : {}}
+    >
       <Link href="/">
         <Image src="/logo.svg" alt="RoadStar Motors" width={75} height={29} />
       </Link>
+
+      <Button
+        variant="small"
+        className="ml-auto mr-3 md:order-1 md:fixed md:top-0 md:right-0 md:mt-5 md:mr-10 flex items-center gap-1"
+        onClick={toggleLang}
+      >
+        <MdLanguage className="text-xl" />
+        {lang === "EN" ? "AR" : "EN"}
+      </Button>
 
       <Button variant="ghost" onClick={toggle} className="md:hidden">
         <HiMenuAlt3 className="text-2xl" />
@@ -45,7 +66,7 @@ export const Navbar = () => {
               onClick={toggle}
               className="hover:bg-white/10 transition-all-500 rounded-lg px-2 pb-1"
             >
-              {label}
+              {t(label)}
             </Link>
           </li>
         ))}

@@ -1,12 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "../button";
 import { cars } from "@/lib/data";
+import { useTranslation } from "@/contexts/translation-provider";
 
 export const CarsSection = () => {
+  const { lang, translate: t } = useTranslation();
+
+  const lang_ = lang as "EN" | "AR";
+
   return (
     <section className="px-res py-10 text-typography flex flex-col items-center">
       <h2 className="font-semibold text-xl pb-5 text-center border-b-4 border-b-primary w-full max-w-[15rem]">
-        Cars Inventory
+        {t("inventory.cars.title")}
       </h2>
       <div className="grid xl:grid-cols-2 mt-10 gap-5">
         {cars.map(({ id, name, price, description, image }) => (
@@ -17,10 +24,10 @@ export const CarsSection = () => {
             <div className="sm:border-r-2 flex-1 order-1 sm:-order-1">
               <div className="h-full flex flex-col gap-3 justify-between sm:mr-5">
                 <h3 className="font-bold">{name}</h3>
-                <p className="italic">{description}</p>
+                <p className="italic">{description[lang_]}</p>
                 <p>${price.toLocaleString("en-US")}</p>
                 <Button variant="secondary" href={`/inventory/${id}`}>
-                  View Details
+                  {t("inventory.cars.button")}
                 </Button>
               </div>
             </div>
