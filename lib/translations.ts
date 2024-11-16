@@ -5,6 +5,10 @@ type T = {
 };
 
 const translations: T = {
+  "home.hero.title": {
+    en: "Drive Your Dreams \n Today!",
+    ar: "انطلق نحو أحلامك \n اليوم!",
+  },
   "home.hero.subtitle": {
     en: "Explore a wide range of cars \n with unbeatable prices & \n financing options.",
     ar: "استكشف مجموعة واسعة من \n السيارات بأسعار لا تُنافَس \n وخيارات دفع مريحة.",

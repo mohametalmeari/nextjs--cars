@@ -21,7 +21,7 @@ export const HeroSection = () => {
       <div className="pt-16 sm:pt-32 px-res">
         <div className="pt-12 flex flex-col items-start gap-12">
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-7xl leading-[150%] sm:leading-[150%] lg:leading-[150%]">
-            {t("Home")}
+            {t("home.hero.title")}
           </h1>
           <h2 className="leading-[200%] font-semibold sm:text-2xl sm:leading-[200%]">
             {t("home.hero.subtitle")}
