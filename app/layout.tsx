@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   title: "Cars",
   description:
     "Discover your dream car at RoadStar Motors. Explore our wide selection of new and pre-owned vehicles, flexible financing options, and exceptional customer service. Your journey starts here!",
+  other: {
+    "trustpilot-one-time-domain-verification-id":
+      "cfde4a40-9a04-41df-a1d4-ee30bd7eedad",
+  },
 };
 
 export default function RootLayout({
